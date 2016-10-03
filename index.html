@@ -5,22 +5,14 @@
 <title>初めてのjQuerty</title>
 <input type="text" value="0" id="spin1" />
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-	<button id="go">» Run</button>
-<div id="block">Hello!</div>
-div { 
-  background-color:#bca; 
-  width:100px; 
-  border:1px solid green;
-}
-// Using multiple unit types within one animation.
-$("#go").click(function(){
-  $("#block").animate({ 
-    width: "70%",
-    opacity: 0.4,
-    marginLeft: "0.6in",
-    fontSize: "3em", 
-    borderWidth: "10px"
-  }, 1500 );
+<button id="left">&lt;&lt;</button> <button id="right">&gt;&gt;</button>
+<div class="block"></div>
+$("#right").click(function(){
+  $(".block").animate({"left": "+=50px"}, "slow");
+});
+ 
+$("#left").click(function(){
+  $(".block").animate({"left": "-=50px"}, "slow");
 });
 <script type="text/javascript">
 </script>
